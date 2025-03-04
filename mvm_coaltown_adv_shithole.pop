@@ -1,0 +1,247 @@
+#base robot_standard.pop
+#base robot_giant.pop
+
+WaveSchedule
+{
+	StartingCurrency 400
+	CanBotsAttackWhileInSpawnRoom no
+	
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action Trigger
+		}
+		
+		WaveSpawn
+		{
+			Name "a1"
+			TotalCurrency 100
+			TotalCount 24
+			MaxActive 8
+			SpawnCount 4
+			Where spawnbot
+			WaitBetweenSpawns 5
+			TFBot
+			{
+				Template T_TFBot_Scout_Melee
+				ClassIcon scout_bat
+			}
+		}
+		
+		WaveSpawn
+		{
+			Name "a2"
+			WaitBeforeStarting 0.1
+			TotalCurrency 200
+			TotalCount 24
+			MaxActive 6
+			SpawnCount 3
+			Where spawnbot
+			WaitBetweenSpawns 10
+			TFBot
+			{
+				Template T_TFBot_Heavyweapons_Heavyweight_Champ
+			}
+		}
+		
+		WaveSpawn
+		{
+			Name "a3"
+			TotalCurrency 100
+			WaitBeforeStarting 10
+			TotalCount 18
+			MaxActive 6
+			SpawnCount 3
+			Where spawnbot
+			WaitBetweenSpawns 7
+			TFBot
+			{
+				Class Pyro
+				Skill Normal
+				Item "Traffic Cone"
+			}
+			
+		}
+		
+		WaveSpawn
+		{
+			Name "b1"
+			WaitForAllDead "a1"
+			WaitBeforeStarting 5
+			TotalCurrency 300
+			TotalCount 10
+			MaxActive 10
+			SpawnCount 10
+			Where spawnbot
+			WaitBetweenSpawns 5
+			TFBot
+			{
+				Class Soldier
+				Skill Easy
+			}
+		}
+	}
+	
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action Trigger
+		}
+		
+		WaveSpawn
+		{
+			Name "a1"
+			TotalCurrency 200
+			TotalCount 4
+			MaxActive 2
+			SpawnCount 1
+			Where spawnbot
+			WaitBetweenSpawns 35
+			TFBot
+			{
+				Template T_TFBot_Giant_Scout
+			}
+		}
+		
+		WaveSpawn
+		{
+			Name "a2"
+			WaitBeforeStarting 0.1
+			TotalCurrency 200
+			TotalCount 40
+			MaxActive 10
+			SpawnCount 2
+			Where spawnbot
+			WaitBetweenSpawns 3
+			TFBot
+			{
+				Template T_TFBot_Heavyweapons_Heavyweight_Champ
+			}
+		}
+		
+		WaveSpawn
+		{
+			Name "a3"
+			TotalCurrency 100
+			WaitBeforeStarting 10
+			TotalCount 25
+			MaxActive 10
+			SpawnCount 5
+			Where spawnbot
+			WaitBetweenSpawns 10
+			Squad
+			{
+				FormationSize 1024
+				TFBot
+				{
+					Class Soldier
+					Skill Expert
+				}
+				TFBot
+				{
+					Class HeavyWeapons
+					Skill Easy
+				}
+				TFBot
+				{
+					Class HeavyWeapons
+					Skill Easy
+				}
+				TFBot
+				{
+					Class HeavyWeapons
+					Skill Easy
+				}
+				TFBot
+				{
+					Class HeavyWeapons
+					Skill Easy
+				}
+			}
+		}
+	}
+	
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action Trigger
+		}
+	}
+	
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action Trigger
+		}
+	}
+	
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action Trigger
+		}
+	}
+	
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action Trigger
+		}
+	}
+	
+	Wave
+	{
+		StartWaveOutput
+		{
+			Target wave_start_relay
+			Action Trigger
+		}
+		DoneOutput
+		{
+			Target wave_finished_relay
+			Action Trigger
+		}
+	}
+}
